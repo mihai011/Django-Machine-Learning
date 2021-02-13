@@ -5,13 +5,10 @@ from django.db import models
 
 class DeepLearningModel(models.Model):
 
-    model = models.FileField()
+    model = models.FileField(upload_to="models")
     transformations = models.JSONField(default = dict)
 
 class Inference(models.Model):
 
     model = models.ForeignKey('DeepLearningModel', on_delete=models.CASCADE)
-    image = models.ImageField()
-
-
-
+    image = models.ImageField(upload_to="images")
