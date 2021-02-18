@@ -73,6 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DjangoDL.wsgi.application'
 
+CELERY_BROKER_URL = 'amqp://localhost'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
